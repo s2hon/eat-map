@@ -1,105 +1,82 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
----
-
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+# Sushi Junai Web App ![maintained](https://img.shields.io/maintenance/true/2020) ![license](https://img.shields.io/badge/license-MIT-blue)
 
 
-## Get started
+## Deployed
+https://sushi-junai.herokuapp.com/
 
-Install the dependencies...
+## Table of Contents
+* [Description](#Description)
+* [Version](#Version)
+* [Technologies](#Technologies)
+* [Instructions for Use](#Instructions)
+* [Motivation](#Motivation)
+* [Contributors](#Contributors)
+* [Questions](#Questions)
+* [License](#License)
 
-```bash
-cd svelte-app
-npm install
-```
+## Description
 
-...then start [Rollup](https://rollupjs.org):
+Sushi Junai's web app is an interactive menu for the restaurant's all-you-can-eat customers. Diners can add items to their order summary, see the amount those items would've cost, and calculate tip. A timer shows diners how long they have left in their two hour all-you-can-eat dining time. Diners also have the option to create an account and save menu items to their favorites for easy access the next time they dine at Sushi Junai.
 
-```bash
-npm run dev
-```
+Along with the interactive menu element, this app also functions as Sushi Junai's basic website, complete with hours, contact information, links to make reservations and order online, and a static version of the menu.
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+## Version 
+0.1.0
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+## Technologies
 
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
+* React
+* Redux
+* MySQL
+* Sequelize
+* Express
+* Passport
+* Bootstrap
+* Reactstrap
 
-## Building and running in production mode
+## Instructions
 
-To create an optimised version of the app:
+All-You-Can-Eat:
 
-```bash
-npm run build
-```
+1. Select the "Dine In" button at the bottom of the homepage.
+2. Create an account or continue as a guest.
+3. Read all four all-you-can-eat rules then click the "I Agree" button below.
+4. Click the + button on the right side of the screen to add items to your order.
+    1. Jump to menu sections using the "Menu" dropdown list.
+    2. Filter the menu by vegetarian and/or gluten free diets with the checkboxes below the menu dropdown.
+5. Click the "Order Summary" button to view your order.
+    1. Us the + and - buttons to adjust the quantities of each item, or delete them with the x button
+    2. If you're logged in, click the heart buttons next to each item to save it as a favorite.
+    3. Click on the percentage boxes at the bottom of the page to generate a suggested tip.
+6. When you're ready, place your order with a server.
+7. Click the "Back to Menu" button when you're ready for another round.
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+## Motivation
+
+Client wants an alternative to physical menus for dine-in customers, as well as a way for all-you-can-eat customers to digitally track everything they've eaten.
+
+## Images
+
+![Menu](./readme-assets/menu-screenshot.png)
+
+## Contributors
+
+* Staci Shon <a href="https://github.com/s2hon" target="_blank">![GitHub followers](https://img.shields.io/github/followers/s2hon?label=s2hon&style=social)</a></br>
+
+* Michelle Moon <a href="https://github.com/Moon-Ingenium/" target="_blank">![GitHub followers](https://img.shields.io/github/followers/Moon-Ingenium?label=Moon-Ingenium&style=social)</a></br>
 
 
-## Single-page app mode
+* Christina Kerr <a href="https://github.com/christinakerr/" target="_blank">![GitHub followers](https://img.shields.io/github/followers/christinakerr?label=christinakerr&style=social)</a></br>
 
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
 
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
+* Aminadab Morales <a href="https://github.com/aminadabm93/" target="_blank">![GitHub followers](https://img.shields.io/github/followers/aminadabm93?label=aminadabm93&style=social)</a></br>
 
-```js
-"start": "sirv public --single"
-```
 
-## Using TypeScript
+* Raunel Suarez-Magana <a href="https://github.com/26rsuarez/" target="_blank">![GitHub followers](https://img.shields.io/github/followers/26rsuarez?label=26rsuarez&style=social)</a></br>
 
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
+## Questions
+<a href="mailto: staci.shon@gmail.com" target="_blank">![open Gmail](https://img.shields.io/badge/open-Gmail-red?style=for-the-badge)</a> 
 
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+## License
+MIT © Staci Shon 
